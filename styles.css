@@ -1,0 +1,232 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the body and html have a height of 100% */
+html, body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #f0f0f0; /* Light text color */
+    background-color: #1a1a1a; /* Dark background color */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexbox Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+header, nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Slightly lighter dark background */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+a {
+    color: #4da6ff; /* Light blue color for links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #3399ff; /* Slightly darker blue on hover */
+    text-decoration: underline;
+}
+
+.main {
+    flex: 1; /* Ensure the main content takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #444; /* Darker background for sections */
+    border-radius: 10px;
+}
+
+section h1, section h2 {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: #333; /* Slightly lighter dark background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Event Styles */
+.event {
+    margin-bottom: 20px;
+}
+
+.event h2, .event h3 {
+    color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.event p {
+    color: #ccc;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    color: #f0f0f0; /* Light text color */
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #444; /* Darker border color */
+}
+
+th {
+    background-color: #333; /* Slightly lighter dark background */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2a2a2a; /* Slightly lighter row color */
+}
+
+/* Map Container */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #444; /* Darker background for the form */
+    border-radius: 10px;
+}
+
+.contact-form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f0f0f0;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555; /* Darker background for inputs */
+    color: #fff;
+}
+
+.contact-form .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form .form-group {
+    width: 48%;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4da6ff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3399ff; /* Slightly darker blue on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Slightly lighter dark background */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    .contact-form .form-row {
+        flex-direction: column;
+    }
+
+    .contact-form .form-group {
+        width: 100%;
+    }
+
+    .map-container iframe {
+        max-width: 100%;
+        height: auto;
+    }
+}
